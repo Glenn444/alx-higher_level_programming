@@ -1,5 +1,5 @@
-#Learing python as a higher level programming language.
-##Here is The Zen of Python, by Tim Peters
+# Learing python as a higher level programming language.
+## Here is The Zen of Python, by Tim Peters
 
 ```
 Beautiful is better than ugly.
