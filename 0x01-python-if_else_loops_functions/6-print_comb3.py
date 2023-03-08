@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Print combination
+# Print combination
 
 for digit1 in range(0, 10):
     for digit2 in range(digit1 + 1, 10):
