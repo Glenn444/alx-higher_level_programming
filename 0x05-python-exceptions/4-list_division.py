@@ -5,16 +5,18 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             if i >= len(my_list_1) or i >= len(my_list_2):
                 raise IndexError("out of range")
-            
+
             dividend = my_list_1[i]
             divisor = my_list_2[i]
-            
-            if not isinstance(dividend, (int, float)) or not isinstance(divisor, (int, float)):
+            dividend_type = isinstance(dividend, (int, float))
+            divisor_type = isinstance(divisor, (int, float))
+
+            if not dividend_type or not divisor_type:
                 raise TypeError("wrong type")
-            
+
             if divisor == 0:
                 raise ZeroDivisionError("division by 0")
-            
+
             result = dividend / divisor
         except IndexError as e:
             print("out of range")
@@ -27,5 +29,5 @@ def list_division(my_list_1, my_list_2, list_length):
             result = 0
         finally:
             result_list.append(result)
-    
+
     return result_list
