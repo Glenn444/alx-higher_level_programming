@@ -111,8 +111,12 @@ class Rectangle:
             return ''
 
         rectangle_str = ''
-        for _ in range(self.height):
-            rectangle_str += '#' * self.__width + '\n'
+        for i in range(self.height):
+            for j in range(self.width):
+                rectangle_str += '#'
+
+            if i != self.height - 1:
+                rectangle_str += '\n'
         return rectangle_str
 
     def __check_valid_width(self, width):
