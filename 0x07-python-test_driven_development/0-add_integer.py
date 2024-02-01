@@ -18,9 +18,10 @@ def add_integer(a, b=98):
 
     """
 
-    if type(a) not in [int, float]:
+    if type(a) not in (int, float):
         raise TypeError('a must be an integer')
-    elif type(b) not in [int, float]:
+
+    if type(b) not in (int, float):
         raise TypeError('b must be an integer')
 
     a = convert_to_int(a)
@@ -29,15 +30,15 @@ def add_integer(a, b=98):
 
 
 def convert_to_int(num):
-        """Converts float to int
+    """ Converts float to int
 
-        Cast a float to an integer number
+    Cast a float to an integer number
 
-        Args:
-            num: argument
+    Args:
+        num: argument
 
-        """
-        
-        if type(num) is float:
-            num = int(num)
-        return num
+    """
+
+    if type(num) is float:
+        num = int(num)
+    return num
